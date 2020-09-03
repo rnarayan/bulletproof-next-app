@@ -5,7 +5,6 @@ import Youtube from '../../components/Youtube'
 import { getPostList, getPost } from '../../lib/data'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
-import Comments from '../../components/Comments'
 import findImageInMarkdown from '../../lib/find-image-in-markdown'
 
 export default function Post({ post }) {
@@ -58,8 +57,6 @@ export default function Post({ post }) {
             {post.content}
           </Markdown>
         </div>
-        <b>Comments</b>
-        <Comments slug={post.slug} />
       </div>
     </Theme>
   )
